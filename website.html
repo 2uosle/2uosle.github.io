@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Electronics Repair Services</title>
+    <style>
+        body {
+        	background-image: url('https://images.pexels.com/photos/4862892/pexels-photo-4862892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Replace with the actual URL of your background image */
+        	background-size: cover;
+        	background-position: center;
+
+        
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-image: url('https://images.pexels.com/photos/5138188/pexels-photo-5138188.jpeg?auto=compress&cs=tinysrgb&w=1600'); 
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            
+            
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .service {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+        }
+
+        .service h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .service p {
+            font-size: 1.1em;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+        }
+
+        .contact-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Electronics Repair Services</h1>
+        <nav>
+            <a href=about-us.html>About Us</a>
+            <a href=services.html>Services</a>
+            <a href=contact.html>Contact</a>
+            <a href= store.html>Store</a>
+        </nav>
+    </header>
+
+    <div class="container" id="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to Your Electronics Repair Services. We are a team of highly skilled technicians dedicated to providing top-notch repair services for electronic devices. With years of expertise, we can fix various electronic devices, including keyboards, laptops, and electric keyboards.</p>
+    </div>
+
+    <div class="container" id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Keyboard Repair</h3>
+                <p>We specialize in fixing various types of keyboards, including mechanical and membrane keyboards.</p>
+            </div>
+
+            <div class="service">
+                <h3>Laptop Repair</h3>
+                <p>We provide comprehensive laptop repair services, from hardware to software issues.</p>
+            </div>
+
+            <div class="service">
+                <h3>Electric Keyboard Repair</h3>
+                <p>If your electric keyboard needs repair, we have the expertise to get it working like new.</p>
+            </div>
+
+            <!-- Add more services here -->
+
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need our services, feel free to reach out to us. You can contact us through the following means:</p>
+        <div class="contact-info">
+            <ul>
+                <li>Email: yourservices@example.com</li>
+                <li>Phone: +123-456-7890</li>
+                <li>Address: 123 Main Street, Your City, 12345</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container" id="subscribe">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with our latest news and offers. Subscribe to our newsletter by providing your email below:</p>
+        <form id="subscribe-form">
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+    <script>
+        // You can add JavaScript code here for interactivity if needed.
+        const subscribeForm = document.getElementById('subscribe-form');
+
+        subscribeForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = subscribeForm.querySelector('input[type="email"]').value;
+            // Here, you can send the email to your newsletter service or perform other actions.
+            console.log(`Subscribed with email: ${email}`);
+            // You may want to display a confirmation message to the user.
+        });
+    </script>
+</body>
+</html>
+

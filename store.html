@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store | Your Electronics Repair Services</title>
+    <style>
+        /* Add CSS for your store page styling here */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('your-background-image-url.jpg'); /* Set your background image URL here */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .service {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+        .service h3 {
+            font-size: 1.5em;
+        }
+        .service p {
+            font-size: 1.1em;
+        }
+        .service a {
+            text-decoration: none; /* Remove underline */
+            color: #333; /* Change link color to your preferred color */
+        }
+        .service img {
+            max-width: 100%;
+            height: auto;
+        }
+        header {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background */
+            color: #fff;
+            padding: 20px;
+        }
+        nav {
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #0074E4; /* Button background color */
+            padding: 10px 20px; /* Add padding to the buttons */
+            margin: 0 20px;
+            border-radius: 5px; /* Add rounded corners */
+            display: inline-block;
+            transition: background-color 0.3s; /* Add a smooth color transition on hover */
+        }
+        nav a:hover {
+            background-color: #005AA7; /* Change button color on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Visit Our Store</h1>
+        <nav>
+            <a href="website.html">Home</a>
+            <a href="#about-us">About Us</a>
+            <a href="#contact">Contact Us</a>
+            <a href="store.html">Store</a>
+        </nav>
+    </header>
+    <div class="container" id="store">
+        <h2>Welcome to Our Store</h2>
+        <p>Explore our wide range of services:</p>
+        <div class="grid">
+            <!-- Service 1: Keyboard Repair -->
+            <div class="service">
+                <a href="keyboard_repair.html">
+                    <img src="https://images.pexels.com/photos/4449800/pexels-photo-4449800.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Keyboard Repair" style="width: 300px; height: 200px;">
+                    <h3>Keyboard Repair</h3>
+                    <p>We specialize in fixing various types of keyboards.</p>
+                </a>
+            </div>
+            
+            <!-- Service 2: Keyboard Modifications -->
+            <div class="service">
+                <a href="keyboard_modifications.html">
+                    <img src="https://pampanga360.com/wp-content/uploads/2022/03/FEATURED.jpg" alt="Keyboard Modifications" style="width: 300px; height: 200px;">
+                    <h3>Keyboard Modifications</h3>
+                    <p>We offer customization options for your keyboard.</p>
+                </a>
+            </div>
+            
+            <!-- Service 3: Keyboard Repair + Modifications -->
+            <div class="service">
+                <a href="keyboard_repair_modifications.html">
+                    <img src="https://cdn.mos.cms.futurecdn.net/BsEdJbxdeC2p6UKNFvvn49.jpg" alt="Keyboard Repair + Modifications" style="width: 300px; height: 200px;">
+                    <h3>Keyboard Repair + Modifications</h3>
+                    <p>Combining repair and customization for your keyboard.</p>
+                </a>
+            </div>
+            
+            <!-- Service 4: Laptop Repair Services (hardware) -->
+            <div class="service">
+                <a href="laptop_hardware.html">
+                    <img src="https://images.pexels.com/photos/1476321/pexels-photo-1476321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Laptop Repair (Hardware)" style="width: 300px; height: 200px;">
+                    <h3>Laptop Repair Services (Hardware)</h3>
+                    <p>We fix hardware issues in laptops.</p>
+                </a>
+            </div>
+            
+            <!-- Service 5: Laptop Configuration Services (software) -->
+            <div class="service">
+                <a href="laptop_software.html">
+                    <img src="https://primetechsupport.com/cdn/shop/files/laptop-software-configuration-service-product-image-1-b2c.webp?v=1688064007" alt="Laptop Repair (Software)" style="width: 300px; height: 200px;">
+                    <h3>Laptop Configuration Services (Software)</h3>
+                    <p>We provide software troubleshooting and solutions for laptops.</p>
+                </a>
+            </div>
+            
+            <!-- Service 6: Laptop Repair Services (software & hardware) -->
+            <div class="service">
+                <a href="laptop_software_hardware.html">
+                    <img src="https://images.ctfassets.net/16nm6vz43ids/7g9t8d7WaVz7BM1L9RmrCl/9f42265945660d42d58111bf3e169aab/Repair_or_replace_laptop.png" alt="Laptop Repair (Software & Hardware)" style="width: 300px; height: 200px;">
+                    <h3>Laptop Repair & Configuration Services (Software & Hardware)</h3>
+                    <p>Comprehensive laptop repair covering both software and hardware.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
