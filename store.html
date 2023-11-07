@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store | ZywooKB Services</title>
     <style>
-        /* Add CSS for your store page styling here */
         body {
             font-family: Arial, sans-serif;
-            background-image: url('your-background-image-url.jpg'); /* Set your background image URL here */
+            background-image: url('https://images.pexels.com/photos/4862892/pexels-photo-4862892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -19,7 +19,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background */
+            background-color: rgba(166, 183, 161, 0.6);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
             margin-top: 20px;
@@ -43,49 +43,74 @@
             font-size: 1.1em;
         }
         .service a {
-            text-decoration: none; /* Remove underline */
-            color: #333; /* Change link color to your preferred color */
+            text-decoration: none;
+            color: #333;
         }
         .service img {
             max-width: 100%;
             height: auto;
         }
         header {
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background */
+            background-image: url('https://static.vecteezy.com/system/resources/previews/009/726/494/non_2x/pixel-park-with-tree-flowerbeds-benches-pots-and-trash-can-urban-landscape-cityscape-background-for-8bit-game-vector.jpg');
+            background-size: cover;
+            background-position: center;
             color: #fff;
             padding: 20px;
+            text-align: center;
         }
+        
+        h1 {
+            font-family: 'Press Start 2P', sans-serif; /* Use the retro game font here */
+            font-size: 36px; /* Adjust the font size as needed */
+            margin: 0;
+            color: #C33740
+        }
+        
         nav {
             text-align: center;
         }
         nav a {
             text-decoration: none;
             color: #fff;
-            background-color: #0074E4; /* Button background color */
-            padding: 10px 20px; /* Add padding to the buttons */
+            background: linear-gradient(to bottom, #000, #A5E592);
+            padding: 10px 20px;
             margin: 0 20px;
-            border-radius: 5px; /* Add rounded corners */
+            border-radius: 20px;
             display: inline-block;
-            transition: background-color 0.3s; /* Add a smooth color transition on hover */
+            transition: background 0.3s;
         }
         nav a:hover {
-            background-color: #005AA7; /* Change button color on hover */
+            background: linear-gradient(to bottom, #000, #A5E592);
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
         }
     </style>
+    <script>
+        // JavaScript for highlighting "Store" when the button is clicked
+        function highlightStore() {
+            const storeHeading = document.getElementById('store-heading');
+            storeHeading.classList.add('highlight');
+            setTimeout(function() {
+                storeHeading.classList.remove('highlight');
+            }, 1000); // Adjust the delay (in milliseconds) as needed
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Visit Our Store</h1>
+        <h1>Offered Services</h1>
         <nav>
             <a href="website.html">Home</a>
-            <a href="#about-us">About Us</a>
-            <a href="#contact">Contact Us</a>
-            <a href="store.html">Store</a>
+            <a href="store.html" onclick="highlightStore();">Store</a>
         </nav>
     </header>
     <div class="container" id="store">
-        <h2>Welcome to Our Store</h2>
+        <h2 id="store-heading">Welcome to Our Store</h2>
         <p>Explore our wide range of services:</p>
         <div class="grid">
             <!-- Service 1: Keyboard Repair -->
@@ -144,4 +169,5 @@
         </div>
     </div>
 </body>
+</html>
 

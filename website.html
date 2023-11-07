@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZywooKB Services</title>
     <style>
         body {
-        	background-image: url('https://images.pexels.com/photos/4862892/pexels-photo-4862892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Replace with the actual URL of your background image */
-        	background-size: cover;
-        	background-position: center;
-
-        
+            background-image: url('https://images.pexels.com/photos/4862892/pexels-photo-4862892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: contain;
+            background-position: center;
+            background-attachment: fixed;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             background-color: #f2f2f2;
+            height: 300px;
         }
 
         header {
-            background-image: url('https://images.pexels.com/photos/5138188/pexels-photo-5138188.jpeg?auto=compress&cs=tinysrgb&w=1600'); 
+            background-image: url('https://static.vecteezy.com/system/resources/previews/010/356/075/original/welcome-banner-in-retro-style-illustration-vector.jpg');
             background-size: cover;
             background-position: center;
             color: #fff;
@@ -27,21 +28,32 @@
         }
 
         h1 {
+            font-family: 'Press Start 2P', sans-serif; /* Use the retro game font here */
+            font-size: 36px; /* Adjust the font size as needed */
             margin: 0;
+            color: #C33740
         }
 
         nav {
             display: flex;
             justify-content: center;
             margin-top: 20px;
-            
-            
         }
 
         nav a {
-            text-decoration: none;
-            color: #fff;
-            margin: 0 20px;
+          text-decoration: none;
+   		 display: inline-block;
+   		 padding: 10px 20px;
+    		 margin: 0 20px;
+    		 color: #fff;
+   		 background-color: #000; /* Solid black fill */
+    		 border: none;
+    		 border-radius: 20px;
+   		 transition: background 0.3s; /* Smooth transition effect */
+        }
+
+        nav a:hover {
+            background: linear-gradient(90deg, #20D5D5, #000);
         }
 
         .container {
@@ -55,18 +67,19 @@
         }
 
         .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+    		display: flex;
+    		flex-wrap: wrap;
+    		justify-content: center; /* Center-align the services */
+   		gap: 20px; /* Adjust the gap between services */
         }
 
         .service {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            margin: 10px;
-            width: 30%;
+                background-color: #f9f9f9;
+    		border: 1px solid #ddd;
+    		border-radius: 5px;
+    		padding: 20px;
+    		margin: 10px;
+    		flex: 0 0 calc(33.33% - 20px);
         }
 
         .service h3 {
@@ -91,22 +104,27 @@
             margin: 10px 0;
             font-size: 1.2em;
         }
+        /* Highlight */
+         .highlight {
+             background-color: yellow; /* Change to the desired highlight color */
+            transition: background-color 0.5s; /* Smooth transition effect */
+}
+
     </style>
 </head>
 <body>
     <header>
         <h1>ZywooKB Services</h1>
         <nav>
-            <a href=about-us.html>About Us</a>
-            <a href=services.html>Services</a>
-            <a href=contact.html>Contact</a>
-            <a href= store.html>Store</a>
+            <a href="#about-us">About Us</a>
+            <a href="#contact">Contact Us</a>
+            <a href="store.html">Store</a>
         </nav>
     </header>
 
     <div class="container" id="about-us">
-        <h2>About Us</h2>
-        <p>Welcome to Your Electronics Repair Services. We are a team of highly skilled technicians dedicated to providing top-notch repair services for electronic devices. With years of expertise, we can fix various electronic devices, including keyboards, laptops, and electric keyboards.</p>
+        <h2 id="about-heading">About Us</h2>
+        <p>Welcome to ZywooKB Services. We are a team of highly skilled technicians dedicated to providing top-notch repair services for electronic devices. With years of expertise, we can fix various electronic devices, including keyboards, laptops, and electric keyboards.</p>
     </div>
 
     <div class="container" id="services">
@@ -118,17 +136,29 @@
             </div>
 
             <div class="service">
-                <h3>Laptop Repair</h3>
-                <p>We provide comprehensive laptop repair services, from hardware to software issues.</p>
+                <h3>Keyboard Modifications</h3>
+                <p>We offer customization options for your keyboard.</p>
             </div>
 
             <div class="service">
-                <h3>Electric Keyboard Repair</h3>
-                <p>If your electric keyboard needs repair, we have the expertise to get it working like new.</p>
+                <h3>Keyboard Repair + Modifications</h3>
+                <p>Combining repair and customization for your keyboard.</p>
             </div>
 
-            <!-- Add more services here -->
+            <div class="service">
+                <h3>Laptop Repair Services (hardware)</h3>
+                <p>We fix hardware issues in laptops.</p>
+            </div>
 
+            <div class="service">
+                <h3>Laptop Configuration Services (software)</h3>
+                <p>We provide software troubleshooting and solutions for laptops.</p>
+            </div>
+
+            <div class="service">
+                <h3>Laptop Repair Services (software & hardware)</h3>
+                <p>Comprehensive laptop repair covering both software and hardware.</p>
+            </div>
         </div>
     </div>
 
@@ -149,20 +179,32 @@
         <p>Stay updated with our latest news and offers. Subscribe to our newsletter by providing your email below:</p>
         <form id="subscribe-form">
             <input type="email" placeholder="Your Email" required>
-            <button type="submit">Subscribe</button>
+            <button type="submit" style="background-color: #20D5D5; color: #fff; border: 2px solid #20D5D5; border-radius: 20px; padding: 10px 20px;">Subscribe</button>
         </form>
     </div>
 
     <script>
-        // You can add JavaScript code here for interactivity if needed.
+        // Javascript
         const subscribeForm = document.getElementById('subscribe-form');
 
         subscribeForm.addEventListener('submit', function (e) {
             e.preventDefault();
             const email = subscribeForm.querySelector('input[type="email"]').value;
-            // Here, you can send the email to your newsletter service or perform other actions.
+            //Newsletter
             console.log(`Subscribed with email: ${email}`);
-            // You may want to display a confirmation message to the user.
+            // Confirmation
+            
+            //Higlight
+         const aboutButton = document.querySelector('a[href="#about-us"]');
+         const aboutHeading = document.getElementById('about-heading');
+
+            aboutButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                aboutHeading.classList.add('highlight');
+                setTimeout(() => {
+                aboutHeading.classList.remove('highlight'); 
+                }, 1000); // Delay(ms)       
+            
         });
     </script>
 </body>
