@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:regular">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZywooKB Services</title>
@@ -87,12 +88,13 @@
             margin: 0;
             font-size: 1.5em;
             color: #000000;
-
+            font-family: 'Source Code Pro', sans-serif; /* Change the font for services */
         }
 
         .service p {
             font-size: 1.1em;
             color: #000000;
+            font-family: 'Source Code Pro', sans-serif; /* Change the font for services */
         }
 
         .contact-info {
@@ -144,8 +146,8 @@
     </header>
 
     <div class="container" id="about-us">
-        <h2 id="about-heading">About Us</h2>
-        <p>Welcome to ZywooKB Services. We are a team of highly skilled technicians dedicated to providing top-notch repair services for electronic devices. With years of expertise, we can fix various electronic devices, including keyboards, laptops, and electric keyboards.</p>
+        <h2 id="about-heading" style="font-family: 'Source Code Pro', sans-serif;">About Us</h2>
+        <p style="font-family: 'Source Code Pro', sans-serif;">Welcome to ZywooKB Services. We are a team of highly skilled technicians dedicated to providing top-notch repair services for electronic devices. With years of expertise, we can fix various electronic devices, including keyboards, laptops, and electric keyboards.</p>
     </div>
 
     <div class="container" id="services">
@@ -184,8 +186,8 @@
     </div>
 
     <div class="container" id="contact">
-        <h2 id="contact-heading">Contact Us</h2>
-        <p>If you have any questions or need our services, feel free to reach out to us. You can contact us through the following means:</p>
+         <h2 id="contact-heading" style="font-family: 'Source Code Pro', sans-serif;">Contact Us</h2>
+        <p style="font-family: 'Source Code Pro', sans-serif;">If you have any questions or need our services, feel free to reach out to us. You can contact us through the following means:</p>
         <div class="contact-info">
             <ul>
                 <li>Email: dizoncedrickjohn@gmail.com</li>
@@ -196,8 +198,8 @@
     </div>
 
     <div class="container" id="subscribe">
-        <h2>Subscribe to Our Newsletter</h2>
-        <p>Stay updated with our latest news and offers. Subscribe to our newsletter by providing your email below:</p>
+        <h2 style="font-family: 'Source Code Pro', sans-serif;">Subscribe to Our Newsletter</h2>
+        <p style="font-family: 'Source Code Pro', sans-serif;">Stay updated with our latest news and offers. Subscribe to our newsletter by providing your email below:</p>
         <form id="subscribe-form">
             <input type="email" placeholder="Your Email" required>
             <button type="submit" style="background-color: #20D5D5; color: #fff; border: 2px solid #20D5D5; border-radius: 20px; padding: 10px 20px;">Subscribe</button>
@@ -208,47 +210,51 @@
     <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
 
     <script>
-        // Javascript
-        const subscribeForm = document.getElementById('subscribe-form');
-        const aboutButton = document.querySelector('a[href="#about-us"]');
-        const aboutHeading = document.getElementById('about-heading');
-        const contactButton = document.querySelector('a[href="#contact"]'); // Select the "Contact Us" button
-        const contactHeading = document.getElementById('contact-heading');
+    // JavaScript
+    const subscribeForm = document.getElementById('subscribe-form');
+    const aboutButton = document.querySelector('a[href="#about-us"]');
+    const aboutHeading = document.getElementById('about-heading');
+    const contactButton = document.querySelector('a[href="#contact"]');
+    const contactHeading = document.getElementById('contact-heading');
 
-        // Function to scroll to the top of the page
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+    // Function to scroll to the top of the page
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-        // Function to scroll to a specific section
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
+    // Function to scroll to a specific section
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
 
-        subscribeForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const email = subscribeForm.querySelector('input[type="email"]').value;
-            // Newsletter
-            console.log(`Subscribed with email: ${email}`);
-            // Confirmation
-        });
+    function removeHighlight(element) {
+        element.classList.remove('highlight');
+    }
 
-        aboutButton.addEventListener('click', function (e) {
-            e.preventDefault();
-            aboutHeading.classList.add('highlight');
-            setTimeout(() => {
-                aboutHeading.classList.remove('highlight');
-            }, 1000); // Delay(ms)
-        });
+    subscribeForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = subscribeForm.querySelector('input[type="email"]').value;
+        // Newsletter
+        console.log(`Subscribed with email: ${email}`);
+        // Confirmation
+    });
 
-        contactButton.addEventListener('click', function (e) {
-            e.preventDefault();
-            contactHeading.classList.add('highlight');
-            setTimeout(() => {
-                contactHeading.classList.remove('highlight');
-            }, 1000); // Delay(ms)
-        });
-    </script>
+    aboutButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        aboutHeading.classList.add('highlight');
+        setTimeout(() => {
+            removeHighlight(aboutHeading);
+        }, 500); // Delay(ms)
+    });
+
+    contactButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        contactHeading.classList.add('highlight');
+        setTimeout(() => {
+            removeHighlight(contactHeading);
+        }, 500); // Delay(ms)
+    });
+</script>
 </body>
 </html>
